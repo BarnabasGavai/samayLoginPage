@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:loginpage/Components/Login_button.dart';
 import 'package:loginpage/Components/Password_input.dart';
+import 'package:loginpage/Components/Titles.dart';
 import 'package:loginpage/Components/Username_input.dart';
 
 void main() {
@@ -58,26 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
               const SizedBox(
                 height: 80,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    "Login",
-                    style: GoogleFonts.inter(
-                      color: Colors.white,
-                      fontSize: 36,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Text(
-                    "Sign in to continue",
-                    style: GoogleFonts.inter(color: Colors.white, fontSize: 16),
-                  ),
-                ],
-              ),
+              Titles(title: "Login", subtitle: "Sign in to get started"),
               SizedBox(
                 height: 80,
               ),
@@ -139,25 +122,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         SizedBox(
                           height: 10,
                         ),
-                        SizedBox(
-                          height: 44,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  Color.fromARGB(255, 117, 189, 65),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(10)),
-                            ),
-                            onPressed: () {
+                        LoginButton(
+                            button_name: "Login",
+                            onclick_func: () {
                               _formKey.currentState!.validate();
-                            },
-                            child: Center(
-                                child: Text('Login',
-                                    style: GoogleFonts.inter(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold))),
-                          ),
-                        ),
+                            }),
                         SizedBox(
                           height: 25,
                         ),

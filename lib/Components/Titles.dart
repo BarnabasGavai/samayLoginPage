@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Title extends StatelessWidget {
+class Titles extends StatelessWidget {
   String title;
   String subtitle;
-  Title({super.key, required this.title, required this.subtitle});
+  Titles({super.key, required this.title, required this.subtitle});
 
   @override
   Widget build(BuildContext context) {
