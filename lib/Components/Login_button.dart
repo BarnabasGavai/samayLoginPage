@@ -20,7 +20,7 @@ class LoginButton extends StatelessWidget {
         ),
         onPressed: onclick_func,
         child: Center(
-            child: Text('Login',
+            child: Text(button_name,
                 style: GoogleFonts.inter(
                     fontSize: 20, fontWeight: FontWeight.bold))),
       ),

@@ -6,6 +6,7 @@ import 'package:loginpage/Components/Login_button.dart';
 import 'package:loginpage/Components/Password_input.dart';
 import 'package:loginpage/Components/Titles.dart';
 import 'package:loginpage/Components/Username_input.dart';
+import 'package:flutter_svg/svg.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -125,7 +126,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Center(
                             child: Container(
-                                child: SvgPicture.asset('assets/logos.svg')))
+                                child: SvgPicture.asset('assets/logos.svg',
+                                    semanticsLabel: 'logo')))
                       ],
                     )),
                   ],
