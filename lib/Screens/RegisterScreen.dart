@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:loginpage/Components/Login_button.dart';
+import 'package:loginpage/Components/Logos.dart';
 import 'package:loginpage/Components/Password_input.dart';
 import 'package:loginpage/Components/Titles.dart';
 import 'package:loginpage/Components/Username_input.dart';
@@ -124,12 +125,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           ],
                         ),
                         SizedBox(
-                          height: 25,
+                          height: 30,
                         ),
-                        Center(
-                            child: Container(
-                                child: SvgPicture.asset('assets/logos.svg',
-                                    semanticsLabel: 'logo')))
+                        Logos(google: () {}, fb: () {}, insta: () {})
                       ],
                     )),
                   ],
