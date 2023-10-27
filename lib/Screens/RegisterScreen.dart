@@ -7,6 +7,7 @@ import 'package:loginpage/Components/Logos.dart';
 import 'package:loginpage/Components/Password_input.dart';
 import 'package:loginpage/Components/Titles.dart';
 import 'package:loginpage/Components/Username_input.dart';
+import 'package:loginpage/Screens/LoginScreen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -115,12 +116,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   fontSize: 14,
                                   color: Color.fromARGB(255, 254, 250, 250)),
                             ),
-                            Text(
-                              "Sign in",
-                              style: GoogleFonts.inter(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 14),
+                            InkWell(
+                              child: Text(
+                                "Sign in",
+                                style: GoogleFonts.inter(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 14),
+                              ),
+                              onTap: () {
+                                Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LoginScreen()));
+                              },
                             )
                           ],
                         ),
